@@ -62,6 +62,13 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
+		195B9F2A2396B68C002C2E8F /* Class */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
 		19FF6CEC23965EF6008A2CB3 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +90,7 @@
 		19FF6CF723965EF6008A2CB3 /* kiwari-ios-test */ = {
 			isa = PBXGroup;
 			children = (
+				195B9F2A2396B68C002C2E8F /* Class */,
 				19211A012396A3DF009F4BE4 /* DB */,
 				19FF6D0F23967584008A2CB3 /* TableController */,
 				19FF6D0A2396686A008A2CB3 /* Controller */,
@@ -212,6 +220,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-kiwari-ios-test/Pods-kiwari-ios-test-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -225,6 +234,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",

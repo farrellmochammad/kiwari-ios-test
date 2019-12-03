@@ -11,5 +11,6 @@ target 'kiwari-ios-test' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'CryptoSwift'
+  pod 'Alamofire'
 
 end

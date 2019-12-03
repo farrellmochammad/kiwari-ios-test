@@ -16,34 +16,26 @@ class Home: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        readContact()
         personTableView.tableFooterView = UIView()
-        
-        """
-        let salt = "qehn8OVXrL"
-        print("qehn8OVXrLjarjit@mail.com123456".sha256())
-        print("qehn8OVXrLismail@mail.com123456".sha256())
-        """
-        
-        /*let db = Firestore.firestore()
-        var ref: DocumentReference? = nil
-        ref = db.collection("users").addDocument(data: [
-            "first": "Ada",
-            "last": "Lovelace",
-            "born": 1815
-        ]) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
-            }
-        }*/
-
     }
-    
     
     
     @IBAction func onLogout(_ sender: Any) {
         print("Hello logout")
+    }
+    
+    func readContact(){
+        db.collection(useremail!).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    print(querySnapshot?.documents.count)
+                }
+            }
+        }
     }
 }
 

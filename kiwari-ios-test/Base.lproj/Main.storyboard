@@ -119,7 +119,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="78.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logout" translatesAutoresizingMaskIntoConstraints="NO" id="Xdc-iq-KOm">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xdc-iq-KOm">
                                                     <rect key="frame" x="15" y="11" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="Mc9-jy-VZN"/>
@@ -160,6 +160,9 @@
                                                 <constraint firstItem="Xdc-iq-KOm" firstAttribute="top" secondItem="Tvr-fl-Fo8" secondAttribute="top" constant="11" id="xLb-sv-RJN"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarIcon" destination="Xdc-iq-KOm" id="i6G-mK-Da0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -312,7 +315,4 @@
             <point key="canvasLocation" x="952.79999999999995" y="133.5832083958021"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="ic_logout" width="512" height="512"/>
-    </resources>
 </document>

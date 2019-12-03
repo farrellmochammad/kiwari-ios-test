@@ -32,6 +32,7 @@ class Login: UIViewController {
                 for document in querySnapshot!.documents {
                     if document.data()["email"] as! String == email {
                         if self.generateKeyHash(email: email, password: password) == document.data()["password"] as! String{
+                            useremail = document.data()["email"] as? String
                             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeNavigation")
                             self.present(nextViewController, animated:true, completion:nil)

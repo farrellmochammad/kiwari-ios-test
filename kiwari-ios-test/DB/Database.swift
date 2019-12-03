@@ -10,4 +10,5 @@ import Foundation
 import FirebaseFirestore
 
 let db = Firestore.firestore()
+var useremail: String?
 
