@@ -12,6 +12,10 @@ class PersonTableController: UITableViewCell {
 
     @IBOutlet weak var avatarIcon: UIImageView!
     
+    @IBOutlet weak var txContactName: UILabel!
+    
+    @IBOutlet weak var txMessage: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -27,6 +31,17 @@ class PersonTableController: UITableViewCell {
         
         
         // Configure the view for the selected state
+    }
+    
+    func setContactInfo(contact: Contact){
+        let url = URL(string: contact.friend_avatar!)
+        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        avatarIcon.image = UIImage(data: data!)
+        
+        txContactName.text = contact.friend_name
+        
+        txMessage.text = contact.last_chat
+
     }
     
    

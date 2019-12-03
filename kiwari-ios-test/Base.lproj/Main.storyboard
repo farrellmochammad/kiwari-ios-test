@@ -162,6 +162,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="avatarIcon" destination="Xdc-iq-KOm" id="i6G-mK-Da0"/>
+                                            <outlet property="txContactName" destination="FIG-C6-Xrk" id="Bqz-oo-1a9"/>
+                                            <outlet property="txMessage" destination="lV4-DJ-q8Q" id="0fG-dV-lCh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

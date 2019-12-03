@@ -16,7 +16,7 @@ class Chat: UIViewController {
         super.viewDidLoad()
         contextTableView.tableFooterView = UIView()
 
-        self.title = "Isi chat"
+        self.title = tempName
     }
 
 }
