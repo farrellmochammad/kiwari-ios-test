@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>150580966241-ojb50nushutv28cgbg6u5oii7j2mlfbn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.150580966241-ojb50nushutv28cgbg6u5oii7j2mlfbn</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB7F4NEwX7Al1lS_nUEDrz0mSW2VPcokg8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>150580966241</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>farrell.kiwari-ios-test</string>
+	<key>PROJECT_ID</key>
+	<string>chat-server-3616e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chat-server-3616e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:150580966241:ios:0ab4165090723905ca0b20</string>
+	<key>DATABASE_URL</key>
+	<string>https://chat-server-3616e.firebaseio.com</string>
+</dict>
+</plist>

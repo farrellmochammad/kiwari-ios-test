@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		192119FC2396890A009F4BE4 /* ContextFromTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192119FB2396890A009F4BE4 /* ContextFromTableController.swift */; };
+		192119FE2396891A009F4BE4 /* ContextToTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192119FD2396891A009F4BE4 /* ContextToTableController.swift */; };
+		19211A0023968D23009F4BE4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 192119FF23968D23009F4BE4 /* GoogleService-Info.plist */; };
+		19211A032396A3F4009F4BE4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19211A022396A3F4009F4BE4 /* Database.swift */; };
+		19FF6CF923965EF6008A2CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF6CF823965EF6008A2CB3 /* AppDelegate.swift */; };
+		19FF6CFB23965EF6008A2CB3 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF6CFA23965EF6008A2CB3 /* Login.swift */; };
+		19FF6CFE23965EF6008A2CB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19FF6CFC23965EF6008A2CB3 /* Main.storyboard */; };
+		19FF6D0023965EF7008A2CB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19FF6CFF23965EF7008A2CB3 /* Assets.xcassets */; };
+		19FF6D0323965EF7008A2CB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19FF6D0123965EF7008A2CB3 /* LaunchScreen.storyboard */; };
+		19FF6D0C23966A1A008A2CB3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF6D0B23966A1A008A2CB3 /* Home.swift */; };
+		19FF6D11239675B8008A2CB3 /* PersonTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF6D10239675B8008A2CB3 /* PersonTableController.swift */; };
+		19FF6D1323967A70008A2CB3 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF6D1223967A70008A2CB3 /* Chat.swift */; };
+		6844E69F3ECE4F500B502BAD /* Pods_kiwari_ios_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57B2199A30C34182235377D /* Pods_kiwari_ios_test.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		192119FB2396890A009F4BE4 /* ContextFromTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextFromTableController.swift; sourceTree = "<group>"; };
+		192119FD2396891A009F4BE4 /* ContextToTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextToTableController.swift; sourceTree = "<group>"; };
+		192119FF23968D23009F4BE4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		19211A022396A3F4009F4BE4 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		19FF6CF523965EF6008A2CB3 /* kiwari-ios-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kiwari-ios-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19FF6CF823965EF6008A2CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		19FF6CFA23965EF6008A2CB3 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		19FF6CFD23965EF6008A2CB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19FF6CFF23965EF7008A2CB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19FF6D0223965EF7008A2CB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		19FF6D0423965EF7008A2CB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19FF6D0B23966A1A008A2CB3 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		19FF6D10239675B8008A2CB3 /* PersonTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableController.swift; sourceTree = "<group>"; };
+		19FF6D1223967A70008A2CB3 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		B57B2199A30C34182235377D /* Pods_kiwari_ios_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kiwari_ios_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE278F85AF994A2783F978E0 /* Pods-kiwari-ios-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kiwari-ios-test.debug.xcconfig"; path = "Target Support Files/Pods-kiwari-ios-test/Pods-kiwari-ios-test.debug.xcconfig"; sourceTree = "<group>"; };
+		C61E1A87A5B9C732D0E510DD /* Pods-kiwari-ios-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kiwari-ios-test.release.xcconfig"; path = "Target Support Files/Pods-kiwari-ios-test/Pods-kiwari-ios-test.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19FF6CF223965EF6008A2CB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6844E69F3ECE4F500B502BAD /* Pods_kiwari_ios_test.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19211A012396A3DF009F4BE4 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				19211A022396A3F4009F4BE4 /* Database.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		19FF6CEC23965EF6008A2CB3 = {
+			isa = PBXGroup;
+			children = (
+				19FF6CF723965EF6008A2CB3 /* kiwari-ios-test */,
+				19FF6CF623965EF6008A2CB3 /* Products */,
+				7F9C6BE83B48F67DB52E94FF /* Pods */,
+				8E5B8ADC8E5C9F890AF5C2E0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		19FF6CF623965EF6008A2CB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19FF6CF523965EF6008A2CB3 /* kiwari-ios-test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19FF6CF723965EF6008A2CB3 /* kiwari-ios-test */ = {
+			isa = PBXGroup;
+			children = (
+				19211A012396A3DF009F4BE4 /* DB */,
+				19FF6D0F23967584008A2CB3 /* TableController */,
+				19FF6D0A2396686A008A2CB3 /* Controller */,
+				19FF6CF823965EF6008A2CB3 /* AppDelegate.swift */,
+				19FF6CFC23965EF6008A2CB3 /* Main.storyboard */,
+				19FF6CFF23965EF7008A2CB3 /* Assets.xcassets */,
+				19FF6D0123965EF7008A2CB3 /* LaunchScreen.storyboard */,
+				19FF6D0423965EF7008A2CB3 /* Info.plist */,
+				192119FF23968D23009F4BE4 /* GoogleService-Info.plist */,
+			);
+			path = "kiwari-ios-test";
+			sourceTree = "<group>";
+		};
+		19FF6D0A2396686A008A2CB3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				19FF6CFA23965EF6008A2CB3 /* Login.swift */,
+				19FF6D0B23966A1A008A2CB3 /* Home.swift */,
+				19FF6D1223967A70008A2CB3 /* Chat.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		19FF6D0F23967584008A2CB3 /* TableController */ = {
+			isa = PBXGroup;
+			children = (
+				19FF6D10239675B8008A2CB3 /* PersonTableController.swift */,
+				192119FB2396890A009F4BE4 /* ContextFromTableController.swift */,
+				192119FD2396891A009F4BE4 /* ContextToTableController.swift */,
+			);
+			path = TableController;
+			sourceTree = "<group>";
+		};
+		7F9C6BE83B48F67DB52E94FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE278F85AF994A2783F978E0 /* Pods-kiwari-ios-test.debug.xcconfig */,
+				C61E1A87A5B9C732D0E510DD /* Pods-kiwari-ios-test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8E5B8ADC8E5C9F890AF5C2E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B57B2199A30C34182235377D /* Pods_kiwari_ios_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19FF6CF423965EF6008A2CB3 /* kiwari-ios-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19FF6D0723965EF7008A2CB3 /* Build configuration list for PBXNativeTarget "kiwari-ios-test" */;
+			buildPhases = (
+				B3375A4869FEF19D50E02047 /* [CP] Check Pods Manifest.lock */,
+				19FF6CF123965EF6008A2CB3 /* Sources */,
+				19FF6CF223965EF6008A2CB3 /* Frameworks */,
+				19FF6CF323965EF6008A2CB3 /* Resources */,
+				2B57835B9FA700A1D78914FC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "kiwari-ios-test";
+			productName = "kiwari-ios-test";
+			productReference = 19FF6CF523965EF6008A2CB3 /* kiwari-ios-test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19FF6CED23965EF6008A2CB3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "farrell mochammad";
+				TargetAttributes = {
+					19FF6CF423965EF6008A2CB3 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 19FF6CF023965EF6008A2CB3 /* Build configuration list for PBXProject "kiwari-ios-test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19FF6CEC23965EF6008A2CB3;
+			productRefGroup = 19FF6CF623965EF6008A2CB3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19FF6CF423965EF6008A2CB3 /* kiwari-ios-test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19FF6CF323965EF6008A2CB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19FF6D0323965EF7008A2CB3 /* LaunchScreen.storyboard in Resources */,
+				19211A0023968D23009F4BE4 /* GoogleService-Info.plist in Resources */,
+				19FF6D0023965EF7008A2CB3 /* Assets.xcassets in Resources */,
+				19FF6CFE23965EF6008A2CB3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B57835B9FA700A1D78914FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kiwari-ios-test/Pods-kiwari-ios-test-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kiwari-ios-test/Pods-kiwari-ios-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3375A4869FEF19D50E02047 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kiwari-ios-test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19FF6CF123965EF6008A2CB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				192119FC2396890A009F4BE4 /* ContextFromTableController.swift in Sources */,
+				19FF6CFB23965EF6008A2CB3 /* Login.swift in Sources */,
+				192119FE2396891A009F4BE4 /* ContextToTableController.swift in Sources */,
+				19FF6D11239675B8008A2CB3 /* PersonTableController.swift in Sources */,
+				19FF6D0C23966A1A008A2CB3 /* Home.swift in Sources */,
+				19FF6D1323967A70008A2CB3 /* Chat.swift in Sources */,
+				19211A032396A3F4009F4BE4 /* Database.swift in Sources */,
+				19FF6CF923965EF6008A2CB3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		19FF6CFC23965EF6008A2CB3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19FF6CFD23965EF6008A2CB3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		19FF6D0123965EF7008A2CB3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19FF6D0223965EF7008A2CB3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19FF6D0523965EF7008A2CB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		19FF6D0623965EF7008A2CB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19FF6D0823965EF7008A2CB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE278F85AF994A2783F978E0 /* Pods-kiwari-ios-test.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "kiwari-ios-test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "farrell.kiwari-ios-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19FF6D0923965EF7008A2CB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C61E1A87A5B9C732D0E510DD /* Pods-kiwari-ios-test.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "kiwari-ios-test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "farrell.kiwari-ios-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19FF6CF023965EF6008A2CB3 /* Build configuration list for PBXProject "kiwari-ios-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19FF6D0523965EF7008A2CB3 /* Debug */,
+				19FF6D0623965EF7008A2CB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19FF6D0723965EF7008A2CB3 /* Build configuration list for PBXNativeTarget "kiwari-ios-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19FF6D0823965EF7008A2CB3 /* Debug */,
+				19FF6D0923965EF7008A2CB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19FF6CED23965EF6008A2CB3 /* Project object */;
+}
