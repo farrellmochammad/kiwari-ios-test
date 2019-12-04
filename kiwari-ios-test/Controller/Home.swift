@@ -24,6 +24,7 @@ class Home: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.showSpinner(onView: self.view)
         contacts = []
         readContact()
     }
@@ -45,6 +46,7 @@ class Home: UIViewController {
                     self.contacts.append(Contact(chat_id: document.documentID,friend_avatar: document.data()["friend_avatar"] as! String, friend_email: document.data()["friend_email"] as! String , friend_name: document.data()["friend_name"] as! String, last_chat: document.data()["last_chat"] as! String))
                 }
                 self.personTableView.reloadData()
+                self.removeSpinner()
             }
         }
     }

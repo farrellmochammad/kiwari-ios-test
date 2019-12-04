@@ -25,6 +25,7 @@ class Chat: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.showSpinner(onView: self.view)
         readChat()
     }
     
@@ -55,6 +56,7 @@ class Chat: UIViewController {
                 }
                 self.chats = self.chats.sorted(by: { $0.order! < $1.order! })
                 self.contextTableView.reloadData()
+                self.removeSpinner()
             }
         }
     }
