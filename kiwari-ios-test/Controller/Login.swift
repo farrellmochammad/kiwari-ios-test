@@ -17,12 +17,14 @@ class Login: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     @IBAction func onLogin(_ sender: Any) {
         readUsername(email: txEmail.text!, password: txPassword.text!)
     }
+    
     
     func readUsername(email: String,password: String){
         db.collection("username").getDocuments() { (querySnapshot, err) in

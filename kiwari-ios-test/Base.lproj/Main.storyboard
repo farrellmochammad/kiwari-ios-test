@@ -241,6 +241,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="1000" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="txContext" destination="Xvm-SM-Agx" id="buo-hu-mRn"/>
+                                            <outlet property="txDate" destination="a11-P5-nwt" id="RIp-eZ-qiV"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="49" shouldIndentWhileEditing="NO" reuseIdentifier="ContextToTableController" rowHeight="55" id="3oh-0E-qFd" customClass="ContextToTableController" customModule="kiwari_ios_test" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="83" width="375" height="55"/>

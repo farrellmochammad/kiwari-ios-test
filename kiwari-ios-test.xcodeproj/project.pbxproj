@@ -12,6 +12,7 @@
 		19211A0023968D23009F4BE4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 192119FF23968D23009F4BE4 /* GoogleService-Info.plist */; };
 		19211A032396A3F4009F4BE4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19211A022396A3F4009F4BE4 /* Database.swift */; };
 		195B9F2C2396B73C002C2E8F /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195B9F2B2396B73C002C2E8F /* Contact.swift */; };
+		19AB2F7C239754FF00A08EAC /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AB2F7B239754FF00A08EAC /* Context.swift */; };
 		19FF6CF923965EF6008A2CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF6CF823965EF6008A2CB3 /* AppDelegate.swift */; };
 		19FF6CFB23965EF6008A2CB3 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF6CFA23965EF6008A2CB3 /* Login.swift */; };
 		19FF6CFE23965EF6008A2CB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19FF6CFC23965EF6008A2CB3 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		192119FF23968D23009F4BE4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		19211A022396A3F4009F4BE4 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		195B9F2B2396B73C002C2E8F /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		19AB2F7B239754FF00A08EAC /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		19FF6CF523965EF6008A2CB3 /* kiwari-ios-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kiwari-ios-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19FF6CF823965EF6008A2CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19FF6CFA23965EF6008A2CB3 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				195B9F2B2396B73C002C2E8F /* Contact.swift */,
+				19AB2F7B239754FF00A08EAC /* Context.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				195B9F2C2396B73C002C2E8F /* Contact.swift in Sources */,
 				192119FC2396890A009F4BE4 /* ContextFromTableController.swift in Sources */,
 				19FF6CFB23965EF6008A2CB3 /* Login.swift in Sources */,
+				19AB2F7C239754FF00A08EAC /* Context.swift in Sources */,
 				192119FE2396891A009F4BE4 /* ContextToTableController.swift in Sources */,
 				19FF6D11239675B8008A2CB3 /* PersonTableController.swift in Sources */,
 				19FF6D0C23966A1A008A2CB3 /* Home.swift in Sources */,

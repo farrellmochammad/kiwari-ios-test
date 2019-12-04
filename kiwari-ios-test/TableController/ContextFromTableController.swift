@@ -10,6 +10,9 @@ import UIKit
 
 class ContextFromTableController: UITableViewCell {
 
+    @IBOutlet weak var txDate: UILabel!
+    @IBOutlet weak var txContext: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +22,11 @@ class ContextFromTableController: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setContext(context: Context){
+        txDate.text = context.date
+        txContext.text = context.context
     }
 
 }

@@ -33,7 +33,7 @@ class Home: UIViewController {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    self.contacts.append(Contact(friend_avatar: document.data()["friend_avatar"] as! String, friend_name: document.data()["friend_name"] as! String, last_chat: document.data()["last_chat"] as! String))
+                    self.contacts.append(Contact(chat_id: document.data()["chat_id"] as! String,friend_avatar: document.data()["friend_avatar"] as! String, friend_name: document.data()["friend_name"] as! String, last_chat: document.data()["last_chat"] as! String))
                     print("\(document.documentID) => \(document.data())")
                 }
               self.personTableView.reloadData()
@@ -61,10 +61,10 @@ extension Home: UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tempName = contacts[indexPath.row].friend_name
+        chatid = contacts[indexPath.row].chat_id
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Chat") as! Chat
         self.navigationController?.pushViewController(nextViewController, animated: true)
-
     }
     
 }
