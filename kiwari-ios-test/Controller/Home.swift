@@ -19,6 +19,7 @@ class Home: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUserEmail()
         personTableView.tableFooterView = UIView()
     }
