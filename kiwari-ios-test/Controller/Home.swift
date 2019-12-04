@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import CoreData
 import CryptoSwift
 
 class Home: UIViewController {
@@ -18,6 +19,7 @@ class Home: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUserEmail()
         personTableView.tableFooterView = UIView()
     }
     
@@ -28,7 +30,10 @@ class Home: UIViewController {
     
     
     @IBAction func onLogout(_ sender: Any) {
-        print("Hello logout")
+        deleteLogin()
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Login")
+        self.present(nextViewController, animated:true, completion:nil)
     }
     
     func readContact(){
@@ -43,6 +48,47 @@ class Home: UIViewController {
             }
         }
     }
+    
+    func setUserEmail(){
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Stat")
+        //request.predicate = NSPredicate(format: "age = %@", "12")
+        request.returnsObjectsAsFaults = false
+        let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+        
+        do {
+            let result = try context?.fetch(request)
+            for data in result as! [NSManagedObject] {
+                if data.value(forKey: "useremail") as? String != nil {
+                    useremail = data.value(forKey: "useremail") as? String
+                }
+            }
+        } catch {
+            print("Failed")
+        }
+        
+    }
+    
+    func deleteLogin(){
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Stat")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject]
+            {
+                context.delete(data)
+            }
+            do {
+                try context.save()
+            }
+            catch {
+                print(error)
+            }
+        } catch {
+            print("Gagal")
+        }
+        
+    }
 
 }
 
@@ -55,6 +101,8 @@ extension Home: UITableViewDataSource,UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PersonTableController") as! PersonTableController
         
         cell.setContactInfo(contact: contacts[indexPath.row])
+        
+        cell.selectionStyle = .none
 
         return cell
     }

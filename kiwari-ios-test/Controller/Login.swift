@@ -8,6 +8,7 @@
 
 import UIKit
 import CryptoSwift
+import CoreData
 
 class Login: UIViewController {
 
@@ -35,6 +36,7 @@ class Login: UIViewController {
                     if document.data()["email"] as! String == email {
                         if self.generateKeyHash(email: email, password: password) == document.data()["password"] as! String{
                             useremail = document.data()["email"] as? String
+                            self.setCoreData(useremail: useremail!)
                             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeNavigation")
                             self.present(nextViewController, animated:true, completion:nil)
@@ -49,6 +51,19 @@ class Login: UIViewController {
         }
     }
     
+    func setCoreData(useremail: String){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Stat", in: context)
+        let newUser = NSManagedObject(entity: entity!, insertInto: context)
+        newUser.setValue(true, forKey: "islogin")
+        newUser.setValue(useremail, forKey: "useremail")
+        do {
+            try context.save()
+        } catch {
+            print("Failed saving")
+        }
+    }
     
     func generateKeyHash(email: String,password: String)->String{
         let salt = "qehn8OVXrL" + email + password

@@ -21,6 +21,7 @@ class Chat: UIViewController {
         super.viewDidLoad()
         contextTableView.tableFooterView = UIView()
         self.title = tempName
+    
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -111,11 +112,15 @@ extension Chat: UITableViewDataSource,UITableViewDelegate {
             
             cell.setContext(context: chats[indexPath.row])
             
+            cell.selectionStyle = .none
+            
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ContextToTableController") as! ContextToTableController
             
             cell.setContext(context: chats[indexPath.row])
+            
+            cell.selectionStyle = .none
             
             return cell
         }

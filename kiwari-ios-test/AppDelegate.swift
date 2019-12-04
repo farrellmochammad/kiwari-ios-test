@@ -8,19 +8,43 @@
 
 import UIKit
 import Firebase
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    lazy var persistentContainer: NSPersistentContainer = {
+        
+        let container = NSPersistentContainer(name: "CoreData")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error {
+                
+                fatalError("Unresolved error, \((error as NSError).userInfo)")
+            }
+        })
+        return container
+    }()
         
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        
-        // Override point for customization after application launch.
-        return true
+        if getStatus() {
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "HomeNavigation")
+            
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+            
+            return true
+        } else {
+            return true
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -43,6 +67,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func getStatus()->Bool{
+        var stat = false
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Stat")
+        //request.predicate = NSPredicate(format: "age = %@", "12")
+        request.returnsObjectsAsFaults = false
+        let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+
+        do {
+            let result = try context?.fetch(request)
+            for data in result as! [NSManagedObject] {
+                if data.value(forKey: "islogin") as? Bool != nil {
+                    if data.value(forKey: "islogin") as? Bool == true {
+                        stat = true
+                    }
+                }
+            }
+        } catch {
+            print("Failed")
+        }
+        
+        return stat
     }
 
 

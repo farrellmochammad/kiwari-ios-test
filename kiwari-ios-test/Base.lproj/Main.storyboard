@@ -13,7 +13,7 @@
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="Login" customModule="kiwari_ios_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="Login" customModule="kiwari_ios_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,37 +127,27 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIG-C6-Xrk">
-                                                    <rect key="frame" x="73" y="11" width="254" height="18"/>
+                                                    <rect key="frame" x="73" y="11" width="287" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lV4-DJ-q8Q">
-                                                    <rect key="frame" x="73" y="36" width="254" height="13.5"/>
+                                                    <rect key="frame" x="73" y="36" width="287" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGV-vv-L68">
-                                                    <rect key="frame" x="335" y="19" width="29" height="24"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="24" id="5Pd-2k-Rmh"/>
-                                                        <constraint firstAttribute="width" constant="29" id="7My-L8-nr8"/>
-                                                    </constraints>
-                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="FIG-C6-Xrk" firstAttribute="leading" secondItem="Xdc-iq-KOm" secondAttribute="trailing" constant="8" id="0LZ-RV-qz4"/>
                                                 <constraint firstItem="lV4-DJ-q8Q" firstAttribute="leading" secondItem="Xdc-iq-KOm" secondAttribute="trailing" constant="8" id="50i-1F-3Mr"/>
-                                                <constraint firstItem="yGV-vv-L68" firstAttribute="leading" secondItem="lV4-DJ-q8Q" secondAttribute="trailing" constant="8" id="5S5-XA-kgl"/>
-                                                <constraint firstItem="yGV-vv-L68" firstAttribute="top" secondItem="Tvr-fl-Fo8" secondAttribute="top" constant="19" id="641-HV-eFB"/>
                                                 <constraint firstItem="lV4-DJ-q8Q" firstAttribute="top" secondItem="FIG-C6-Xrk" secondAttribute="bottom" constant="7" id="Boe-uh-nbV"/>
-                                                <constraint firstItem="yGV-vv-L68" firstAttribute="leading" secondItem="FIG-C6-Xrk" secondAttribute="trailing" constant="8" id="caD-bD-TlJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="lV4-DJ-q8Q" secondAttribute="trailing" constant="15" id="OyS-Op-yvS"/>
                                                 <constraint firstItem="FIG-C6-Xrk" firstAttribute="top" secondItem="Tvr-fl-Fo8" secondAttribute="top" constant="11" id="f90-4d-JdM"/>
                                                 <constraint firstItem="Xdc-iq-KOm" firstAttribute="leading" secondItem="Tvr-fl-Fo8" secondAttribute="leading" constant="15" id="ijd-cT-fsR"/>
-                                                <constraint firstAttribute="trailing" secondItem="yGV-vv-L68" secondAttribute="trailing" constant="11" id="kAr-dv-eL8"/>
                                                 <constraint firstItem="Xdc-iq-KOm" firstAttribute="top" secondItem="Tvr-fl-Fo8" secondAttribute="top" constant="11" id="xLb-sv-RJN"/>
+                                                <constraint firstAttribute="trailing" secondItem="FIG-C6-Xrk" secondAttribute="trailing" constant="15" id="zFO-U7-dbg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
