@@ -20,6 +20,20 @@ class Chat: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         contextTableView.tableFooterView = UIView()
+        
+        let containView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        let imageview = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        let url = URL(string: (contact?.friend_avatar)!)
+        let data = try? Data(contentsOf: url!)
+        imageview.image = UIImage(data: data!)
+        imageview.contentMode = UIView.ContentMode.scaleAspectFit
+        imageview.layer.masksToBounds = true
+        containView.addSubview(imageview)
+        let rightBarButton = UIBarButtonItem(customView: containView)
+        self.navigationItem.rightBarButtonItem = rightBarButton
+        
+        //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        
         self.title = tempName
     
     }
