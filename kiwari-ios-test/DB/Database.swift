@@ -10,6 +10,7 @@ import Foundation
 import FirebaseFirestore
 
 let db = Firestore.firestore()
+var ref: DocumentReference? = nil
 var useremail: String?
 var tempName: String?
 var chatid: String?

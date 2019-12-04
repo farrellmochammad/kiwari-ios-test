@@ -207,7 +207,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qCZ-Nm-wlm">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="597"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="49" shouldIndentWhileEditing="NO" reuseIdentifier="ContextFromTableController" rowHeight="55" id="jX4-SW-pu2" customClass="ContextFromTableController" customModule="kiwari_ios_test" customModuleProvider="target">
@@ -277,6 +277,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="1000" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="txContext" destination="0wX-ep-fjz" id="XFh-cP-Iaa"/>
+                                            <outlet property="txDate" destination="BxW-Gw-qmX" id="2a7-3d-foh"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -284,23 +288,43 @@
                                     <outlet property="delegate" destination="8LW-mS-azg" id="C9d-44-gGV"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6L4-wZ-2BU">
+                                <rect key="frame" x="16" y="625" width="280" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5X-d9-Zc6">
+                                <rect key="frame" x="318" y="625" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="onSendChat:" destination="8LW-mS-azg" eventType="touchUpInside" id="Ky6-vn-Nvn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qCZ-Nm-wlm" firstAttribute="top" secondItem="39i-h7-fEp" secondAttribute="top" id="3L6-eU-Icr"/>
+                            <constraint firstItem="39i-h7-fEp" firstAttribute="trailing" secondItem="p5X-d9-Zc6" secondAttribute="trailing" constant="21" id="5wd-Vq-yab"/>
                             <constraint firstItem="39i-h7-fEp" firstAttribute="trailing" secondItem="qCZ-Nm-wlm" secondAttribute="trailing" id="8XT-DP-gaX"/>
-                            <constraint firstItem="39i-h7-fEp" firstAttribute="bottom" secondItem="qCZ-Nm-wlm" secondAttribute="bottom" id="Ofp-59-jUm"/>
+                            <constraint firstItem="6L4-wZ-2BU" firstAttribute="leading" secondItem="39i-h7-fEp" secondAttribute="leading" constant="16" id="HSx-5O-R6u"/>
+                            <constraint firstItem="p5X-d9-Zc6" firstAttribute="top" secondItem="qCZ-Nm-wlm" secondAttribute="bottom" constant="8" id="W5l-Af-L7Y"/>
+                            <constraint firstItem="p5X-d9-Zc6" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6L4-wZ-2BU" secondAttribute="trailing" constant="22" id="ecD-od-tmT"/>
                             <constraint firstItem="qCZ-Nm-wlm" firstAttribute="leading" secondItem="39i-h7-fEp" secondAttribute="leading" id="f8i-jQ-c0N"/>
+                            <constraint firstItem="39i-h7-fEp" firstAttribute="bottom" secondItem="6L4-wZ-2BU" secondAttribute="bottom" constant="12" id="nKb-w1-Iiw"/>
+                            <constraint firstItem="6L4-wZ-2BU" firstAttribute="top" secondItem="qCZ-Nm-wlm" secondAttribute="bottom" constant="8" id="oeE-I1-Jed"/>
+                            <constraint firstItem="39i-h7-fEp" firstAttribute="bottom" secondItem="p5X-d9-Zc6" secondAttribute="bottom" constant="12" id="scr-pf-WU7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="39i-h7-fEp"/>
                     </view>
                     <connections>
                         <outlet property="contextTableView" destination="qCZ-Nm-wlm" id="qJH-ZJ-psv"/>
+                        <outlet property="txChat" destination="6L4-wZ-2BU" id="2aK-XS-DAP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pC-wU-leH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3534" y="170"/>
+            <point key="canvasLocation" x="3533.5999999999999" y="169.56521739130437"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jeM-td-qfg">
