@@ -12,10 +12,12 @@ class Context {
     var context: String?
     var from: String?
     var date: String?
+    var order: Int?
     
-    init(context: String, from: String,date: String){
+    init(context: String, from: String,date: String,order: Int){
         self.context = context
         self.from = from
         self.date = date
+        self.order = order
     }
 }

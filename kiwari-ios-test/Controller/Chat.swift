@@ -15,6 +15,7 @@ class Chat: UIViewController {
     @IBOutlet weak var txChat: UITextField!
     
     var chats: [Context] = []
+    var contact: Contact?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +24,12 @@ class Chat: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("Tak terasa gelap pun jatuh")
         readChat()
     }
     
     @IBAction func onSendChat(_ sender: Any) {
         sendChat(chat: txChat.text!)
+        updateChat(chat: txChat.text!)
         txChat.text = ""
     }
     
@@ -49,9 +50,9 @@ class Chat: UIViewController {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    print(document.data()["context"] as! String)
-                    self.chats.append(Context(context: document.data()["context"] as! String, from: document.data()["from"] as! String, date: document.data()["date"] as! String))
+                    self.chats.append(Context(context: document.data()["context"] as! String, from: document.data()["from"] as! String, date: document.data()["date"] as! String, order: document.data()["order"] as! Int ))
                 }
+                self.chats = self.chats.sorted(by: { $0.order! < $1.order! })
                 self.contextTableView.reloadData()
             }
         }
@@ -62,15 +63,40 @@ class Chat: UIViewController {
             "context": chat,
             "date": getTimeZone(),
             "from": useremail,
+            "order": chats.count
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
                 print("Document added with ID: \(ref!.documentID)")
+                self.chats = []
+                self.readChat()
             }
         }
-        
     }
+    
+    func updateChat(chat: String){
+        db.collection(useremail!).document(chatid!).updateData([
+            "last_chat": chat,
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        db.collection((contact?.friend_email)!).document(chatid!).updateData([
+            "last_chat": chat,
+            ]) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                }
+        }
+    }
+    
+    
 
 }
 

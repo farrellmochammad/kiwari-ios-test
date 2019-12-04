@@ -18,8 +18,12 @@ class Home: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        readContact()
         personTableView.tableFooterView = UIView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        contacts = []
+        readContact()
     }
     
     
@@ -33,13 +37,13 @@ class Home: UIViewController {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    self.contacts.append(Contact(chat_id: document.data()["chat_id"] as! String,friend_avatar: document.data()["friend_avatar"] as! String, friend_name: document.data()["friend_name"] as! String, last_chat: document.data()["last_chat"] as! String))
-                    print("\(document.documentID) => \(document.data())")
+                    self.contacts.append(Contact(chat_id: document.documentID,friend_avatar: document.data()["friend_avatar"] as! String, friend_email: document.data()["friend_email"] as! String , friend_name: document.data()["friend_name"] as! String, last_chat: document.data()["last_chat"] as! String))
                 }
-              self.personTableView.reloadData()
+                self.personTableView.reloadData()
             }
         }
     }
+
 }
 
 extension Home: UITableViewDataSource,UITableViewDelegate {
@@ -64,6 +68,7 @@ extension Home: UITableViewDataSource,UITableViewDelegate {
         chatid = contacts[indexPath.row].chat_id
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Chat") as! Chat
+        nextViewController.contact = contacts[indexPath.row]
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
     
