@@ -20,13 +20,13 @@ class Home: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUserEmail()
         personTableView.tableFooterView = UIView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.showSpinner(onView: self.view)
         contacts = []
+        setUserEmail()
         readContact()
     }
     
