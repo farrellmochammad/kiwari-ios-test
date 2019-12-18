@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class Chat: UIViewController {
 
@@ -40,6 +41,7 @@ class Chat: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         self.showSpinner(onView: self.view)
+        setUserEmail()
         readChat()
     }
     
@@ -73,6 +75,25 @@ class Chat: UIViewController {
                 self.removeSpinner()
             }
         }
+    }
+    
+    func setUserEmail(){
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Stat")
+        //request.predicate = NSPredicate(format: "age = %@", "12")
+        request.returnsObjectsAsFaults = false
+        let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+        
+        do {
+            let result = try context?.fetch(request)
+            for data in result as! [NSManagedObject] {
+                if data.value(forKey: "useremail") as? String != nil {
+                    useremail = data.value(forKey: "useremail") as? String
+                }
+            }
+        } catch {
+            print("Failed")
+        }
+        
     }
     
     func sendChat(chat:String){
