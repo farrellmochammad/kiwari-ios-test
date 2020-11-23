@@ -15,13 +15,23 @@ class Chat: UIViewController {
     
     @IBOutlet weak var txChat: UITextField!
     
+    @IBOutlet var keyboardHeightLayoutConstraint: NSLayoutConstraint?
+    
     var chats: [Context] = []
     var contact: Contact?
+    var keyboardHeight = CGFloat(0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillHideNotification, object: nil)
         contextTableView.tableFooterView = UIView()
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        
+
         let containView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         let imageview = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         let url = URL(string: (contact?.friend_avatar)!)
@@ -33,7 +43,10 @@ class Chat: UIViewController {
         let rightBarButton = UIBarButtonItem(customView: containView)
         self.navigationItem.rightBarButtonItem = rightBarButton
         
+        
         //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        
+        view.addGestureRecognizer(tap)
         
         self.title = tempName
     
@@ -134,8 +147,37 @@ class Chat: UIViewController {
         }
     }
     
-    
+    @objc func keyboardWillShow(notification: NSNotification){
+        guard let userInfo = notification.userInfo else {return}
+        guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {return}
+        let keyboardFrame = keyboardSize.cgRectValue
+        if self.view.frame.origin.y == 0{
+            self.view.frame.origin.y -= keyboardFrame.height
+            keyboardHeight = keyboardFrame.height
+        }
 
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification){
+        guard let userInfo = notification.userInfo else {return}
+        guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {return}
+        let keyboardFrame = keyboardSize.cgRectValue
+        if self.view.frame.origin.y != 0{
+            self.view.frame.origin.y += keyboardFrame.height
+            keyboardHeight = keyboardFrame.height
+
+        }
+       }
+    
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+        if self.view.frame.origin.y != 0{
+            self.view.frame.origin.y += keyboardHeight
+        }
+
+    }
+    
 }
 
 extension Chat: UITableViewDataSource,UITableViewDelegate {
