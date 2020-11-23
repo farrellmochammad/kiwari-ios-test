@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		192119FC2396890A009F4BE4 /* ContextFromTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192119FB2396890A009F4BE4 /* ContextFromTableController.swift */; };
 		192119FE2396891A009F4BE4 /* ContextToTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192119FD2396891A009F4BE4 /* ContextToTableController.swift */; };
-		19211A0023968D23009F4BE4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 192119FF23968D23009F4BE4 /* GoogleService-Info.plist */; };
 		19211A032396A3F4009F4BE4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19211A022396A3F4009F4BE4 /* Database.swift */; };
 		19366E912397C7490028D0DF /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19366E8F2397C7490028D0DF /* CoreData.xcdatamodeld */; };
 		19366E942397D6060028D0DF /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19366E932397D6060028D0DF /* Extension.swift */; };
 		195B9F2C2396B73C002C2E8F /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195B9F2B2396B73C002C2E8F /* Contact.swift */; };
 		19AB2F7C239754FF00A08EAC /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AB2F7B239754FF00A08EAC /* Context.swift */; };
+		19AED34D256BD9FE0073F751 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19AED34C256BD9FE0073F751 /* GoogleService-Info.plist */; };
 		19FF6CF923965EF6008A2CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF6CF823965EF6008A2CB3 /* AppDelegate.swift */; };
 		19FF6CFB23965EF6008A2CB3 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF6CFA23965EF6008A2CB3 /* Login.swift */; };
 		19FF6CFE23965EF6008A2CB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19FF6CFC23965EF6008A2CB3 /* Main.storyboard */; };
@@ -29,12 +29,12 @@
 /* Begin PBXFileReference section */
 		192119FB2396890A009F4BE4 /* ContextFromTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextFromTableController.swift; sourceTree = "<group>"; };
 		192119FD2396891A009F4BE4 /* ContextToTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextToTableController.swift; sourceTree = "<group>"; };
-		192119FF23968D23009F4BE4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		19211A022396A3F4009F4BE4 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		19366E902397C7490028D0DF /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		19366E932397D6060028D0DF /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		195B9F2B2396B73C002C2E8F /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		19AB2F7B239754FF00A08EAC /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		19AED34C256BD9FE0073F751 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		19FF6CF523965EF6008A2CB3 /* kiwari-ios-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kiwari-ios-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19FF6CF823965EF6008A2CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19FF6CFA23965EF6008A2CB3 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -115,10 +115,10 @@
 				19FF6D0A2396686A008A2CB3 /* Controller */,
 				19FF6CF823965EF6008A2CB3 /* AppDelegate.swift */,
 				19FF6CFC23965EF6008A2CB3 /* Main.storyboard */,
+				19AED34C256BD9FE0073F751 /* GoogleService-Info.plist */,
 				19FF6CFF23965EF7008A2CB3 /* Assets.xcassets */,
 				19FF6D0123965EF7008A2CB3 /* LaunchScreen.storyboard */,
 				19FF6D0423965EF7008A2CB3 /* Info.plist */,
-				192119FF23968D23009F4BE4 /* GoogleService-Info.plist */,
 				19366E8F2397C7490028D0DF /* CoreData.xcdatamodeld */,
 			);
 			path = "kiwari-ios-test";
@@ -222,7 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19FF6D0323965EF7008A2CB3 /* LaunchScreen.storyboard in Resources */,
-				19211A0023968D23009F4BE4 /* GoogleService-Info.plist in Resources */,
+				19AED34D256BD9FE0073F751 /* GoogleService-Info.plist in Resources */,
 				19FF6D0023965EF7008A2CB3 /* Assets.xcassets in Resources */,
 				19FF6CFE23965EF6008A2CB3 /* Main.storyboard in Resources */,
 			);

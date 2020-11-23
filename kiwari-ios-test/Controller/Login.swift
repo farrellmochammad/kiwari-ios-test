@@ -39,6 +39,7 @@ class Login: UIViewController {
                             self.setCoreData(useremail: useremail!)
                             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeNavigation")
+                            nextViewController.modalPresentationStyle = .fullScreen
                             self.present(nextViewController, animated:true, completion:nil)
                         }
                     }

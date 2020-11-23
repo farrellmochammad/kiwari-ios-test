@@ -35,6 +35,7 @@ class Home: UIViewController {
         deleteLogin()
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Login")
+        nextViewController.modalPresentationStyle = .fullScreen
         self.present(nextViewController, animated:true, completion:nil)
     }
     

@@ -19,7 +19,7 @@ class PersonTableController: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let url = URL(string: "https://api.adorable.io/avatars/160/ismail@mail.com.png")
+        let url = URL(string: "https://img.freepik.com/free-vector/shining-circle-purple-lighting-isolated-dark-background_1441-2396.jpg?size=626&ext=jpg")
         let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
         avatarIcon.image = UIImage(data: data!)
 

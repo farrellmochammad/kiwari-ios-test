@@ -4,6 +4,9 @@
 target 'kiwari-ios-test' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  
+  # add pods for desired Firebase products
+  # https://firebase.google.com/docs/ios/setup#available-pods
 
   # Pods for kiwari-ios-test
   pod 'Firebase/Analytics'
